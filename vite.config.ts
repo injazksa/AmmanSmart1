@@ -25,10 +25,16 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'motion': ['motion/react'],
-          'router': ['react-router-dom'],
-          'charts': ['recharts'],
+        manualChunks(id) {
+          // Split vendor libraries into separate chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('motion/react')) return 'motion';
+            if (id.includes('react-router-dom')) return 'router';
+            if (id.includes('recharts')) return 'charts';
+            // Default vendor chunk for other node_modules
+            return 'vendor';
+          }
+          // Return undefined to let Vite handle the rest
         },
       },
     },
