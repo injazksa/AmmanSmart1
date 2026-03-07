@@ -38,12 +38,7 @@ export default defineConfig({
         },
       },
     },
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-      },
-    },
+    minify: 'esbuild',
     chunkSizeWarningLimit: 1000,
     sourcemap: false,
   },
