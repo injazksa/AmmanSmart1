@@ -1,0 +1,31 @@
+# Robots.txt for Amman Smart Website
+# Allow all search engines to crawl the website
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*.pdf$
+Disallow: /api/
+Disallow: /.git/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://ammansmart.com/sitemap.xml
+Sitemap: https://ammansmart.com/sitemap-ar.xml
+
+# Crawl delay for other bots
+User-agent: *
+Crawl-delay: 1
+Request-rate: 1/10s
