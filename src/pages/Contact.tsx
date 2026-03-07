@@ -72,20 +72,26 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     
     try {
-      await fetch("/", {
+      const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
       
-      toast.success('تم إرسال رسالتك بنجاح!');
-      (e.target as HTMLFormElement).reset();
-      // Redirect to success page or show success message
-      window.location.href = "/contact?success=true";
+      if (response.ok) {
+        toast.success('تم إرسال رسالتك بنجاح! سنقوم بالرد عليك قريباً.');
+        form.reset();
+        // Use navigate or state instead of full reload if possible, but for Netlify success param is fine
+        window.location.search = "success=true";
+      } else {
+        throw new Error('Network response was not ok');
+      }
     } catch (error) {
+      console.error('Form submission error:', error);
       toast.error('حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.');
     } finally {
       setIsSubmitting(false);

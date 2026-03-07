@@ -1,4 +1,6 @@
-# Redirect all non-file requests to index.html for SPA routing
-/*    /index.html   200
+# Netlify Forms need to handle POST requests to /
+# This ensures the POST request reaches Netlify's form handler before the SPA redirect
+/  /index.html  200
+/* /index.html  200
 
 # Security headers are handled in netlify.toml
