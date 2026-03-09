@@ -1,0 +1,74 @@
+# Robots.txt for Amman Smart Website
+# Configuration for optimal search engine crawling and indexing
+# Last Updated: 2026-03-08
+
+# Default rules for all search engines
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /*.json$
+Disallow: /*.pdf$
+Disallow: /api/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /src/
+Disallow: /test/
+Disallow: /tests/
+
+# Allow access to important resources
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /images/
+Allow: /public/
+
+# Specific rules for Google (Googlebot)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+Request-rate: 1/1s
+
+# Specific rules for Bing (Bingbot)
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+Request-rate: 1/2s
+
+# Specific rules for Yandex
+User-agent: Yandexbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Default crawl delay for other bots
+User-agent: *
+Crawl-delay: 2
+Request-rate: 1/10s
+
+# Sitemap locations
+Sitemap: https://ammansmart.com/sitemap.xml
+Sitemap: https://ammansmart.com/sitemap-ar.xml
+Sitemap: https://ammansmart.com/sitemap-en.xml
+
+# Additional directives
+# Allow indexing of all pages except those explicitly disallowed
+# Ensure all dynamic pages are crawlable

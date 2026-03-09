@@ -1,0 +1,76 @@
+# Netlify Configuration
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22.13.0"
+  PNPM_VERSION = "10.30.2"
+
+# Redirect all non-file requests to index.html (SPA routing)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com"
+
+# Cache headers for static assets
+[[headers]]
+  for = "/public/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML files - no cache
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Forms Configuration
+[[forms]]
+  name = "contact"
+  honeypot = "bot-field"
+  notification_email = "info@ammansmart.com"
+  
+# Form notifications and spam filtering
+[context.production.environment]
+  FORM_SPAM_FILTER = "true"
+  FORM_NOTIFICATION_EMAIL = "info@ammansmart.com"
+  
+# Sitemap and Robots
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+
+# Form submission success redirect
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you"
+  status = 200
