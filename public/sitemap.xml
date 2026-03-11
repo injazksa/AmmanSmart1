@@ -18,8 +18,10 @@
       <video:title>مستقبل عمان الذكية - رؤية 2030</video:title>
       <video:description>فيديو تعريفي بمستقبل عمان الذكية ورؤية 2030 لدمج التكنولوجيا في حياة المدينة.</video:description>
       <video:content_loc>https://ammansmart.com/videos/hero-video.mp4</video:content_loc>
-      <video:player_loc>https://ammansmart.com/</video:player_loc>
+      <video:player_loc>https://ammansmart.com/index.html</video:player_loc>
       <video:duration>8</video:duration>
+      <video:publication_date>2026-03-12T12:00:00+03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
 

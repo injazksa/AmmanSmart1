@@ -1,6 +1,6 @@
 # Robots.txt for Amman Smart Website
 # Configuration for optimal search engine crawling and indexing
-# Last Updated: 2026-03-08
+# Last Updated: 2026-03-12
 
 # Default rules for all search engines
 User-agent: *
@@ -64,10 +64,8 @@ User-agent: *
 Crawl-delay: 2
 Request-rate: 1/10s
 
-# Sitemap locations
+# Sitemap locations - Corrected to only use the main HTTPS sitemap
 Sitemap: https://ammansmart.com/sitemap.xml
-Sitemap: https://ammansmart.com/sitemap-ar.xml
-Sitemap: https://ammansmart.com/sitemap-en.xml
 
 # Additional directives
 # Allow indexing of all pages except those explicitly disallowed
