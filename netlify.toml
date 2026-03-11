@@ -8,6 +8,13 @@
   NODE_VERSION = "22.13.0"
   PNPM_VERSION = "10.30.2"
 
+# Force HTTPS
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
+
 # Redirect all non-file requests to index.html (SPA routing)
 [[redirects]]
   from = "/*"

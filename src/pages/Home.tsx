@@ -78,7 +78,7 @@ export default function Home() {
       <PageMeta
         title="عمان الذكية | مستقبل الاستثمار التقني والمدينة الذكية"
         description="منصة عمان الذكية - مشروع رائد لتطوير حلول النقل الذكي، الإعلانات الرقمية المتقدمة، وبوابات الاستثمار المتطورة. نحن نبني مستقبل عمان من خلال التكنولوجيا والابتكار."
-        keywords="Smart City, Amman, Jordan, Investment, Technology, عمان, مدينة ذكية, استثمار, تكنولوجيا, نقل ذكي, رؤية 2030"
+        keywords="Smart City, Amman, Jordan, Investment, Technology, عمان, مدينة ذكية, استثمار, تكنولوجيا, نقل ذكي, رؤية 2030, عمان سمارت, عمان مدينة الذكاء, مدينة عمان الذكية, Amman Smart, Smart Amman"
         ogUrl="https://ammansmart.com/"
         canonicalUrl="https://ammansmart.com/"
         schemaType="Organization"
