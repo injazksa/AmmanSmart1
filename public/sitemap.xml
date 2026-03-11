@@ -5,20 +5,20 @@
 
   <!-- Home Page - Highest Priority -->
   <url>
-    <loc>https://ammansmart.com/</loc>
+    <loc>http://ammansmart.com/</loc>
     <lastmod>2026-03-12T12:00:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://ammansmart.com/images/background/hero-bg.jpg</image:loc>
+      <image:loc>http://ammansmart.com/images/background/hero-bg.jpg</image:loc>
       <image:title>عمان الذكية - مستقبل الاستثمار التقني والمدينة الذكية</image:title>
     </image:image>
     <video:video>
-      <video:thumbnail_loc>https://ammansmart.com/images/background/hero-bg.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>http://ammansmart.com/images/background/hero-bg.jpg</video:thumbnail_loc>
       <video:title>مستقبل عمان الذكية - رؤية 2030</video:title>
       <video:description>فيديو تعريفي بمستقبل عمان الذكية ورؤية 2030 لدمج التكنولوجيا في حياة المدينة.</video:description>
-      <video:content_loc>https://ammansmart.com/videos/hero-video.mp4</video:content_loc>
-      <video:player_loc>https://ammansmart.com/index.html</video:player_loc>
+      <video:content_loc>http://ammansmart.com/videos/hero-video.mp4</video:content_loc>
+      <video:player_loc>http://ammansmart.com/index.html</video:player_loc>
       <video:duration>8</video:duration>
       <video:publication_date>2026-03-12T12:00:00+03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
@@ -27,31 +27,31 @@
 
   <!-- Smart Initiatives -->
   <url>
-    <loc>https://ammansmart.com/smart-initiatives</loc>
+    <loc>http://ammansmart.com/smart-initiatives</loc>
     <lastmod>2026-03-12T12:00:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://ammansmart.com/images/smart-mobility.png</image:loc>
+      <image:loc>http://ammansmart.com/images/smart-mobility.png</image:loc>
       <image:title>المبادرات الذكية - عمان الذكية</image:title>
     </image:image>
   </url>
 
   <!-- Projects/City Initiatives -->
   <url>
-    <loc>https://ammansmart.com/projects</loc>
+    <loc>http://ammansmart.com/projects</loc>
     <lastmod>2026-03-12T12:00:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://ammansmart.com/images/digital-signage.png</image:loc>
+      <image:loc>http://ammansmart.com/images/digital-signage.png</image:loc>
       <image:title>مشاريع عمان الذكية</image:title>
     </image:image>
   </url>
 
   <!-- Services Guide -->
   <url>
-    <loc>https://ammansmart.com/services</loc>
+    <loc>http://ammansmart.com/services</loc>
     <lastmod>2026-03-12T12:00:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -59,7 +59,7 @@
 
   <!-- City Dashboard -->
   <url>
-    <loc>https://ammansmart.com/dashboard</loc>
+    <loc>http://ammansmart.com/dashboard</loc>
     <lastmod>2026-03-12T12:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
@@ -67,7 +67,7 @@
 
   <!-- News & Updates -->
   <url>
-    <loc>https://ammansmart.com/news</loc>
+    <loc>http://ammansmart.com/news</loc>
     <lastmod>2026-03-12T12:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
@@ -75,19 +75,19 @@
 
   <!-- Future Vision 2030 -->
   <url>
-    <loc>https://ammansmart.com/future-vision</loc>
+    <loc>http://ammansmart.com/future-vision</loc>
     <lastmod>2026-03-12T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://ammansmart.com/images/holograms.png</image:loc>
+      <image:loc>http://ammansmart.com/images/holograms.png</image:loc>
       <image:title>رؤية عمان 2030 - المستقبل الذكي</image:title>
     </image:image>
   </url>
 
   <!-- Contact Page -->
   <url>
-    <loc>https://ammansmart.com/contact</loc>
+    <loc>http://ammansmart.com/contact</loc>
     <lastmod>2026-03-12T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -95,7 +95,7 @@
 
   <!-- Thank You Page -->
   <url>
-    <loc>https://ammansmart.com/thank-you</loc>
+    <loc>http://ammansmart.com/thank-you</loc>
     <lastmod>2026-03-12T12:00:00+03:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -103,7 +103,7 @@
 
   <!-- IP Rights -->
   <url>
-    <loc>https://ammansmart.com/ip-rights</loc>
+    <loc>http://ammansmart.com/ip-rights</loc>
     <lastmod>2026-03-12T12:00:00+03:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

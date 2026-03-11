@@ -64,9 +64,5 @@ User-agent: *
 Crawl-delay: 2
 Request-rate: 1/10s
 
-# Sitemap locations - Corrected to only use the main HTTPS sitemap
-Sitemap: https://ammansmart.com/sitemap.xml
-
-# Additional directives
-# Allow indexing of all pages except those explicitly disallowed
-# Ensure all dynamic pages are crawlable
+# Sitemap locations - Corrected to use HTTP to match user's Google Search Console settings
+Sitemap: http://ammansmart.com/sitemap.xml
