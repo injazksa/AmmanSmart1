@@ -21,36 +21,38 @@ import {
   Building2,
   Mail,
   Rocket,
-  Globe
+  Globe,
+  Cpu,
+  Lightbulb
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
 
 const stats = [
-  { label: 'استثمارات ذكية', value: '100+', icon: TrendingUp },
-  { label: 'منصات خدمية', value: '25+', icon: LayoutGrid },
-  { label: 'تخفيض الازدحام', value: '30%', icon: Zap },
-  { label: 'مساحات خضراء', value: '200+', icon: Leaf },
+  { label: 'استثمارات عمان سمارت', value: '100+', icon: TrendingUp },
+  { label: 'منصات تقنية ذكية', value: '25+', icon: LayoutGrid },
+  { label: 'تخفيض الازدحام المروري', value: '30%', icon: Zap },
+  { label: 'مساحات خضراء مستدامة', value: '200+', icon: Leaf },
 ];
 
 const featuredProjects = [
   {
-    title: 'شبكة شحن المركبات الكهربائية',
-    description: 'إنشاء شبكة متكاملة من محطات شحن المركبات الكهربائية في مواقع استراتيجية.',
+    title: 'شبكة شحن المركبات الكهربائية الذكية',
+    description: 'إنشاء شبكة متكاملة من محطات شحن المركبات الكهربائية في مواقع استراتيجية ضمن رؤية عمان سمارت للنقل المستدام.',
     image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_e3e40fc7-b5b2-4c7b-97fb-0f1736bb74f2.jpg',
-    tag: 'نقل مستدام'
+    tag: 'نقل ذكي'
   },
   {
-    title: 'نظام الترقيم وتسمية الشوارع',
-    description: 'نظام حديث يعتمد على قاعدة بيانات جغرافية متقدمة لتسهيل التنقل والخدمات اللوجستية.',
+    title: 'نظام الترقيم وتسمية الشوارع الرقمي',
+    description: 'نظام حديث يعتمد على قاعدة بيانات جغرافية متقدمة والذكاء الاصطناعي لتسهيل التنقل والخدمات اللوجستية في عمان.',
     image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_ae75a6ae-9b29-48e2-97af-6958e5e6ac3c.jpg',
-    tag: 'بنية تحتية'
+    tag: 'بنية تحتية ذكية'
   },
   {
-    title: 'مشروع رياضي متكامل في خلدا',
-    description: 'مركز رياضي عصري يضم مسبحاً أولمبياً وملاعب متعددة لتعزيز الصحة المجتمعية.',
+    title: 'مشروع خلدا الرياضي المتطور',
+    description: 'مركز رياضي عصري يضم مسبحاً أولمبياً وملاعب متعددة تدار بأنظمة ذكية لتعزيز الصحة المجتمعية في الأردن.',
     image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_ff6e637f-84b3-4116-b814-5bb367f6fedb.jpg',
-    tag: 'تنمية مجتمعية'
+    tag: 'تنمية ذكية'
   }
 ];
 
@@ -62,23 +64,23 @@ export default function Home() {
     if (!email) return;
     
     toast.success("تم الاشتراك بنجاح!", {
-      description: "ستصلك آخر أخبار عمان الذكية ورؤية 2030 قريباً على بريدك الإلكتروني.",
+      description: "ستصلك آخر أخبار عمان سمارت (Amman Smart) ورؤية الأردن 2030 قريباً.",
     });
     setEmail('');
   };
 
   const handleSoon = (feature: string) => {
     toast.info(`ميزة ${feature} قيد التطوير`, {
-      description: "نحن نجهز تجربة استثنائية ستنطلق قريباً.",
+      description: "نحن نجهز تجربة استثنائية ستنطلق قريباً في منصة عمان الذكية.",
     });
   };
 
   return (
     <>
       <PageMeta
-        title="عمان الذكية | مستقبل الاستثمار التقني والمدينة الذكية"
-        description="منصة عمان الذكية - مشروع رائد لتطوير حلول النقل الذكي، الإعلانات الرقمية المتقدمة، وبوابات الاستثمار المتطورة. نحن نبني مستقبل عمان من خلال التكنولوجيا والابتكار."
-        keywords="Smart City, Amman, Jordan, Investment, Technology, عمان, مدينة ذكية, استثمار, تكنولوجيا, نقل ذكي, رؤية 2030, عمان سمارت, عمان مدينة الذكاء, مدينة عمان الذكية, Amman Smart, Smart Amman"
+        title="عمان سمارت | Amman Smart | مستقبل الذكاء والتطور في الأردن"
+        description="منصة عمان سمارت (Amman Smart) - المبادرة الرائدة لتحويل عمان إلى مدينة ذكية مستدامة. اكتشف حلول الذكاء الاصطناعي، النقل الذكي، وفرص الاستثمار التقني في الأردن ورؤية عمان 2030."
+        keywords="عمان سمارت, Amman Smart, مدينة ذكية, الأردن, ذكاء اصطناعي, استثمار تقني, نقل ذكي, رؤية عمان 2030, تكنولوجيا, تطوير عمان, Smart City Jordan, Digital Transformation Amman"
         ogUrl="https://ammansmart.com/"
         canonicalUrl="https://ammansmart.com/"
         schemaType="Organization"
@@ -90,29 +92,29 @@ export default function Home() {
           <AnimatedSection delay={0.1} direction="down">
             <div className="inline-flex items-center gap-2 rounded-full bg-cyan-500/20 px-4 py-1.5 text-sm font-medium text-cyan-300 mb-8 backdrop-blur-sm border border-cyan-500/30 animate-pulse">
               <Rocket className="h-4 w-4" />
-              <span>رؤية عمان 2030 - نحو مستقبل أذكى</span>
+              <span>عمان سمارت (Amman Smart) - نحو مستقبل أذكى للأردن</span>
             </div>
           </AnimatedSection>
 
           <AnimatedSection delay={0.2} direction="up">
             <h1 className="mb-8 text-5xl font-extrabold tracking-tight md:text-8xl leading-tight drop-shadow-2xl">
-              مستقبل عمّان <span className="text-cyan-400">الذكية</span>
+              عمان <span className="text-cyan-400">سمارت</span> الذكية
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay={0.3} direction="up">
             <p className="mb-10 text-xl opacity-95 md:text-2xl leading-relaxed max-w-3xl mx-auto drop-shadow-xl font-medium">
-              نحن لا نبني مدينة فحسب، بل نصمم تجربة حياة متكاملة تربط الإنسان بالتكنولوجيا، وعمان بالعالم، عبر مبادرات رائدة تتجاوز التوقعات.
+              نحن نقود التحول الرقمي في الأردن عبر منصة Amman Smart، لربط التكنولوجيا المتقدمة والذكاء الاصطناعي بحياة المواطن اليومية في عمان.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.4} direction="up">
             <div className="flex flex-wrap gap-6 justify-center">
               <Button size="lg" variant="secondary" className="font-bold text-lg h-14 px-10 shadow-2xl hover:shadow-cyan-500/20 transition-all scale-105 hover:scale-110" asChild>
-                <Link to="/future-vision">استكشف الرؤية المستقبلية</Link>
+                <Link to="/future-vision">رؤية عمان 2030</Link>
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white hover:text-primary font-bold text-lg h-14 px-10 shadow-2xl transition-all" asChild>
-                <Link to="/smart-initiatives">المبادرات الذكية</Link>
+                <Link to="/smart-initiatives">مبادرات الذكاء والتطور</Link>
               </Button>
             </div>
           </AnimatedSection>
@@ -146,17 +148,17 @@ export default function Home() {
             <AnimatedSection direction="right">
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <h2 className="text-4xl font-extrabold text-primary leading-tight">عمان الذكية: دمج الأصالة بالابتكار التقني</h2>
+                  <h2 className="text-4xl font-extrabold text-primary leading-tight">عمان سمارت: ريادة الذكاء الاصطناعي في الأردن</h2>
                   <div className="h-1.5 w-24 bg-primary rounded-full" />
                 </div>
                 <p className="text-xl leading-relaxed text-muted-foreground font-medium">
-                  تقود شركة رؤية عمّان للاستثمار والتطوير، الذراع الاستثماري لأمانة عمّان الكبرى، مبادرة "عمّان الذكية" التي تهدف إلى دمج التكنولوجيا المتقدمة في إدارة المدينة لتعزيز جودة الحياة، وتحسين الخدمات، وتحقيق كفاءة أعلى في الإدارة الحضرية.
+                  تعتبر مبادرة "عمان سمارت" (Amman Smart) المشروع الأهم لشركة رؤية عمّان للاستثمار والتطوير، حيث نهدف إلى دمج أحدث تقنيات الذكاء والتطور التكنولوجي لتحويل العاصمة الأردنية إلى نموذج عالمي للمدن الذكية.
                 </p>
                 <div className="grid gap-6">
                   {[
-                    "تخفيف الازدحامات المرورية والحد من الحوادث عبر الذكاء الاصطناعي.",
-                    "تحسين جودة الخدمات الرقمية الموحدة للمواطنين والمستثمرين.",
-                    "تحقيق الاستدامة البيئية وربط عمان بشبكة المدن الذكية العالمية."
+                    "تطبيق أنظمة الذكاء الاصطناعي لإدارة المرور في شوارع عمان.",
+                    "تطوير بنية تحتية رقمية تدعم الابتكار والذكاء في الأردن.",
+                    "تعزيز مكانة عمان سمارت كمركز إقليمي للتطور التقني."
                   ].map((text, i) => (
                     <AnimatedSection key={i} delay={i * 0.1} direction="right">
                       <div className="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/30 transition-all">
@@ -177,7 +179,7 @@ export default function Home() {
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <img 
                     src="https://miaoda-site-img.s3cdn.medo.dev/images/KLing_a7041ca8-c789-4924-b1b6-69e4af1dc312.jpg" 
-                    alt="Amman City Skyline - عمّان الذكية" 
+                    alt="Amman Smart City - عمان سمارت الذكية" 
                     className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                   />
@@ -187,16 +189,35 @@ export default function Home() {
           </div>
         </FadeInOnScroll>
 
+        {/* SEO Content Section */}
+        <FadeInOnScroll>
+          <div className="bg-primary/5 rounded-[2rem] p-12 border border-primary/10">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <Cpu className="w-16 h-16 text-primary mx-auto mb-4" />
+              <h2 className="text-3xl font-extrabold text-primary">الذكاء والتطور في قلب عمان</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                نحن في <strong>عمان سمارت (Amman Smart)</strong> نؤمن بأن مستقبل الأردن يكمن في التطور التقني. من خلال دمج حلول <strong>الذكاء الاصطناعي</strong> في النقل، الطاقة، والخدمات العامة، نسعى لتكون عمان المدينة الأذكى في المنطقة، محققين بذلك أهداف رؤية عمان 2030.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 pt-4">
+                <Badge variant="outline" className="px-4 py-2 text-sm font-bold border-primary/30">#عمان_سمارت</Badge>
+                <Badge variant="outline" className="px-4 py-2 text-sm font-bold border-primary/30">#Amman_Smart</Badge>
+                <Badge variant="outline" className="px-4 py-2 text-sm font-bold border-primary/30">#ذكاء_اصطناعي_الأردن</Badge>
+                <Badge variant="outline" className="px-4 py-2 text-sm font-bold border-primary/30">#تطور_عمان</Badge>
+              </div>
+            </div>
+          </div>
+        </FadeInOnScroll>
+
         {/* Featured Projects */}
         <section className="space-y-10">
           <FadeInOnScroll>
             <div className="flex flex-col md:flex-row items-end justify-between gap-6 border-b pb-8">
               <div className="space-y-2">
-                <h2 className="text-4xl font-extrabold text-primary">مشاريع بارزة</h2>
-                <p className="text-xl text-muted-foreground font-medium">نظرة على أهم المشاريع الجاري تنفيذها في العاصمة</p>
+                <h2 className="text-4xl font-extrabold text-primary">مشاريع عمان سمارت</h2>
+                <p className="text-xl text-muted-foreground font-medium">أهم مبادرات التطور والذكاء في العاصمة الأردنية</p>
               </div>
               <Button variant="outline" className="font-bold text-lg h-12 px-8 rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
-                <Link to="/projects">مشاهدة كافة المبادرات <ArrowLeft className="mr-2 h-5 w-5" /></Link>
+                <Link to="/projects">استكشف كافة المشاريع <ArrowLeft className="mr-2 h-5 w-5" /></Link>
               </Button>
             </div>
           </FadeInOnScroll>
@@ -222,7 +243,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent className="px-8 pb-8">
                     <Button variant="link" className="p-0 h-auto text-primary font-extrabold text-lg group-hover:gap-3 transition-all">
-                      تفاصيل المشروع <ChevronLeft className="h-5 w-5" />
+                      تفاصيل المبادرة <ChevronLeft className="h-5 w-5" />
                     </Button>
                   </CardContent>
                 </Card>
@@ -243,9 +264,9 @@ export default function Home() {
             <CardContent className="p-16 text-center relative z-10 max-w-3xl mx-auto space-y-8">
               <AnimatedSection direction="down">
                 <div className="space-y-4">
-                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tight">ابقَ على اطلاع برؤية 2030</h3>
+                  <h3 className="text-4xl md:text-5xl font-extrabold tracking-tight">تابع تطور عمان سمارت</h3>
                   <p className="text-xl text-slate-300 font-medium leading-relaxed">
-                    اشترك في نشرتنا الإخبارية لتصلك آخر التطورات حول عمان الذكية، فرص الاستثمار، ومبادرات الواقع الافتراضي القادمة.
+                    اشترك لتصلك آخر أخبار الذكاء الاصطناعي والتطور التقني في عمان ورؤية الأردن 2030.
                   </p>
                 </div>
               </AnimatedSection>
