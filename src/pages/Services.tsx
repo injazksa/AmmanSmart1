@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -97,8 +98,29 @@ const services = [
 ];
 
 export default function Services() {
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchTerm, setSearchTerm] = React.useState(searchParams.get('q') || '');
   const [activeTab, setActiveTab] = React.useState('all');
+
+  // Update search term when URL params change
+  React.useEffect(() => {
+    const query = searchParams.get('q');
+    if (query !== null) {
+      setSearchTerm(query);
+    }
+  }, [searchParams]);
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    
+    // Update URL params without refreshing
+    if (value) {
+      setSearchParams({ q: value }, { replace: true });
+    } else {
+      setSearchParams({}, { replace: true });
+    }
+  };
 
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -123,7 +145,7 @@ export default function Services() {
             placeholder="ابحث عن خدمة..." 
             className="pr-10" 
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={handleSearchChange}
           />
         </div>
         <Tabs defaultValue="all" className="w-full md:w-auto" onValueChange={setActiveTab}>
