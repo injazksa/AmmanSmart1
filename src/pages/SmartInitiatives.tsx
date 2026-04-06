@@ -44,7 +44,7 @@ export default function SmartInitiatives() {
 
         <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl mb-8">
           <img 
-            src="/images/smart-mobility.png" 
+            src="/images/smart-mobility.webp" 
             alt="Smart Mobility" 
             className="w-full h-full object-cover"
           />
@@ -134,7 +134,7 @@ export default function SmartInitiatives() {
             <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-2xl opacity-50" />
             <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img 
-                src="/images/digital-signage.png" 
+                src="/images/digital-signage.webp" 
                 alt="AI Signage" 
                 className="w-full h-full object-cover"
               />
