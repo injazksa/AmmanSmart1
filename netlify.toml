@@ -58,12 +58,12 @@
 [[forms]]
   name = "contact"
   honeypot = "bot-field"
-  notification_email = "info@ammansmart.com"
+  notification_email = "abdallhsmj@gmail.com"
   
 # Form notifications and spam filtering
 [context.production.environment]
   FORM_SPAM_FILTER = "true"
-  FORM_NOTIFICATION_EMAIL = "info@ammansmart.com"
+  FORM_NOTIFICATION_EMAIL = "abdallhsmj@gmail.com"
   
 # Sitemap and Robots
 [[redirects]]

@@ -75,6 +75,9 @@ export default function Contact() {
     const form = e.currentTarget;
     const formData = new FormData(form);
     
+    // Add timestamp for tracking
+    formData.append('submission-time', new Date().toISOString());
+    
     try {
       // Submit to Netlify Forms
       const response = await fetch("/", {
@@ -87,8 +90,8 @@ export default function Contact() {
       if (response.ok || response.status === 301 || response.status === 302) {
         // Form submitted successfully
         form.reset();
-        toast.success('تم استلام رسالتك بنجاح! فريقنا سيتواصل معك قريباً.', {
-          description: 'شكراً لاهتمامك بمنصة عمان الذكية.',
+        toast.success('تم استلام رسالتك بنجاح! سيتم إرسال رسالة تأكيد إلى بريدك الإلكتروني.', {
+          description: 'شكراً لاهتمامك بمنصة عمان الذكية. فريقنا سيتواصل معك قريباً.',
           duration: 5000,
         });
         // Navigate to thank you page after a short delay
@@ -100,7 +103,9 @@ export default function Contact() {
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      toast.error('حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.');
+      toast.error('حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.', {
+        description: 'تأكد من اتصالك بالإنترنت وحاول مرة أخرى.',
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -233,7 +238,7 @@ export default function Contact() {
 
                   <div className="flex items-start gap-3 p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 animate-fade-in">
                     <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-blue-900 dark:text-blue-300 font-medium">سيتم معالجة رسالتك من قبل فريقنا وسنعود إليك في غضون 24 ساعة.</p>
+                    <p className="text-sm text-blue-900 dark:text-blue-300 font-medium">سيتم معالجة رسالتك من قبل فريقنا وسنعود إليك في غضون 24 ساعة. تحقق من بريدك الإلكتروني (وصندوق البريد العشوائي) للتأكد من استقبال رسالة التأكيد.</p>
                   </div>
 
                   <Button 
