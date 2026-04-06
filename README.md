@@ -256,7 +256,7 @@ import { AnimatedSection } from '@/components/common';
 ## 📞 الدعم والتواصل
 
 للمزيد من المعلومات أو الدعم:
-- البريد الإلكتروني: info@ammansmart.com
+- البريد الإلكتروني: abdallhsmj@gmail.com
 - الموقع: www.ammansmart.com
 
 ## 📄 الترخيص

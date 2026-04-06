@@ -20,7 +20,7 @@
 **المشكلة:** ملف `netlify.toml` كان يفتقد إعدادات البريد الإلكتروني والتصفية.
 
 **الحل:** تم إضافة إعدادات متقدمة:
-- بريد إلكتروني للإشعارات: `info@ammansmart.com`
+- بريد إلكتروني للإشعارات: `abdallhsmj@gmail.com`
 - تفعيل تصفية السبام التلقائية
 - إضافة تحويل صريح لصفحة الشكر
 
@@ -57,7 +57,7 @@
 [[forms]]
   name = "contact"
   honeypot = "bot-field"
-  notification_email = "info@ammansmart.com"
+  notification_email = "abdallhsmj@gmail.com"
 ```
 
 ### 3. التحقق من ملف `forms.html`
@@ -81,7 +81,7 @@
 ```
 
 ### 2. إعدادات البريد الإلكتروني
-- تأكد من أن بريد `info@ammansmart.com` موثوق لدى Netlify
+- تأكد من أن بريد `abdallhsmj@gmail.com` موثوق لدى Netlify
 - أضف سجلات SPF و DKIM للنطاق الخاص بك
 
 ### 3. رسائل التأكيد
