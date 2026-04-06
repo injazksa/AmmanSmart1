@@ -32,7 +32,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://ammansmart.com/images/smart-mobility.webp</image:loc>
+      <image:loc>https://ammansmart.com/images/smart-mobility.png</image:loc>
       <image:title>مبادرات الذكاء والتطور - عمان سمارت</image:title>
     </image:image>
   </url>
@@ -44,7 +44,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://ammansmart.com/images/digital-signage.webp</image:loc>
+      <image:loc>https://ammansmart.com/images/digital-signage.png</image:loc>
       <image:title>مشاريع عمان سمارت - Amman Smart</image:title>
     </image:image>
   </url>
