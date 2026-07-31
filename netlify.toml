@@ -2,11 +2,10 @@
 [build]
   command = "pnpm run build"
   publish = "dist"
-  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "22.13.0"
-  PNPM_VERSION = "10.30.2"
+  PNPM_VERSION = "9.12.3"
 
 # Force HTTPS
 [[redirects]]
